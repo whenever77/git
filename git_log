@@ -1,26 +1,4 @@
-smiles@smiles-All-Series:~$ git init
-重新初始化现存的 Git 版本库于 /home/smiles/.git/
-smiles@smiles-All-Series:~$ git status
-位于分支 master
 
-初始提交
-
-未跟踪的文件:
-  （使用 "git add <file>..." 以包含要提交的内容）
-
-	.AndroidStudio2.2/
-	#……此处省略N多
-
-	why/
-	zby/
-
-提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
-
-smiles@smiles-All-Series:~/zby/git$ git add git_test
-
-smiles@smiles-All-Series:~/zby/git$ git commit -m 'test_add' --author='when<when@mail.com>'
-fatal: 非法的 --author 参数
-smiles@smiles-All-Series:~/zby/git$ git commit -m 'test_add'--author='when<when@mail.com>'
 
 *** Please tell me who you are.
 
@@ -28,29 +6,6 @@ Run
 
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'smiles@smiles-All-Series.(none)')
-
-
-smiles@smiles-All-Series:~/zby/git$ git config user.email "when_global@mail.com"
-smiles@smiles-All-Series:~/zby/git$ git config user.name "when_glabal"
-
-smiles@smiles-All-Series:~/zby/git$ git commit -m 'test_add' --author='when_global'
-fatal: 没有找到匹配 'when_global' 的作者
-
-必须与github匹配？然而并无验证
-
-smiles@smiles-All-Series:~/zby/git$ git config user.email "zhubiying77@126.com"
-smiles@smiles-All-Series:~/zby/git$ git config user.name "whenevr77"
-smiles@smiles-All-Series:~/zby/git$ git commit -m 'test_add'
-[master （根提交） 10bd7f9] test_add
- 1 file changed, 1 insertion(+)
- create mode 100644 zby/git/git_test
-
-成功添加 用户名还是错的
 
 
 用法：git config [选项]
@@ -89,25 +44,4 @@ smiles@smiles-All-Series:~/zby/git$ git commit -m 'test_add'
     -z, --null            终止值是NUL字节
     --includes            查询时参照 include 指令递归查找
 
-smiles@smiles-All-Series:~/zby/git$ git config -l
-user.name=whenever77
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-user.email=zhubiying77@126.com
-user.name=whenevr77
 
-
-smiles@smiles-All-Series:~/zby/git$ git config --global --unset name whenevr77
-error: key does not contain a section: name
-smiles@smiles-All-Series:~/zby/git$ git config --global --unset user.name whenevr77
-smiles@smiles-All-Series:~/zby/git$ git config -l
-user.name=whenever77
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-user.email=zhubiying77@126.com
-user.name=whenevr77
-smiles@smiles-All-Series:~/zby/git$ 
